@@ -86,6 +86,11 @@ class Framework {
 		 * 配置商品默认上传路径
 		 */
 		define('GOODS_IMAGE_PATH', UPLOAD_PATH.'goods'.DS);
+		/**
+		 * 定义smarty编译文件路径
+		 */ 
+		define('COMPILE_PATH',CURRENT_VIEW_PATH.CONTROLLER.DS.'view_c'.DS);
+		define('UPLOAD_URL',self::pathToUrl(GOODS_IMAGE_PATH));
 	}
 
 	/**
@@ -119,7 +124,10 @@ class Framework {
 	public static function getNullReplace($value, $re_value) {
 		return isset($value) ? $value : $re_value;
 	}
-
+	public static function pathToUrl($path)
+	{
+		return '/'.str_replace('\\','/',str_replace(ROOT_PATH,'',$path));
+	}
 	/**
 	 * 执行程序入口
 	 *
@@ -163,8 +171,14 @@ class Framework {
 	public static function autoLoad($class_name) {
 
 		$class = '.class.php';
+		$excepts=array('Smarty'=>FRAME_PATH.'libs'.DS.'Smarty.class.php');
 		$frames = array('Model', 'Controller','View');
-		if (in_array($class_name, $frames)) {
+		
+		if(in_array($class_name,array_keys($excepts)))
+		{
+			require $excepts[$class_name];
+		}
+		elseif (in_array($class_name, $frames)) {
 			require FRAME_PATH . $class_name . $class;
 		} elseif (substr($class_name, -10) === 'Controller') {
 			require CURRENT_CONTROLLER_PATH . $class_name . $class;

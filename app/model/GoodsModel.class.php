@@ -6,7 +6,7 @@ class GoodsModel extends Model {
 	public function getList($page,$pagesize) {
 		$offset=($page-1)*$pagesize;
 		
-		$sql = "SELECT * FROM {$this->table()} limit $offset,$pagesize";
+		$sql = "SELECT * FROM {$this->table()} order by goods_id desc limit $offset,$pagesize";
 		$list = $this -> db -> fetchAll($sql);
 		return $list;
 	}

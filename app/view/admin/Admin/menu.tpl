@@ -4,7 +4,7 @@
 <head>
 <title>ECSHOP Menu</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="<?php echo PUBLIC_PATH ?>styles/general.css" rel="stylesheet" type="text/css" />
+<link href="styles/general.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript">
 <!--
 var noHelp   = "<p align='center' style='color: #666'>暂时还没有该部分内容</p>";
@@ -86,15 +86,15 @@ body {
   color: #EB8A3D;
 }
 .explode {
-  background: url(<?php echo PUBLIC_PATH ?>images/menu_minus.gif) no-repeat 0px 3px;
+  background: url(images/menu_minus.gif) no-repeat 0px 3px;
   font-weight: bold;
 }
 .collapse {
-  background: url(<?php echo PUBLIC_PATH ?>images/menu_plus.gif) no-repeat 0px 3px;
+  background: url(images/menu_plus.gif) no-repeat 0px 3px;
   font-weight: bold;
 }
 .menu-item {
-  background: url(<?php echo PUBLIC_PATH ?>images/menu_arrow.gif) no-repeat 0px 3px;
+  background: url(images/menu_arrow.gif) no-repeat 0px 3px;
   font-weight: normal;
 }
 #help-title {
@@ -118,7 +118,7 @@ body {
 </head>
 <body>
 <div id="tabbar-div">
-<p><span style="float:right; padding: 3px 5px;" ><a href="javascript:toggleCollapse();"><img id="toggleImg" src="<?php echo PUBLIC_PATH ?>images/menu_minus.gif" width="9" height="9" border="0" alt="闭合" /></a></span>
+<p><span style="float:right; padding: 3px 5px;" ><a href="javascript:toggleCollapse();"><img id="toggleImg" src="images/menu_minus.gif" width="9" height="9" border="0" alt="闭合" /></a></span>
   <span class="tab-front" id="menu-tab">菜单</span>
 </p>
 </div>
@@ -277,7 +277,6 @@ body {
           <li class="menu-item"><a href="view_sendlist.php?act=list" target="main-frame">邮件队列管理</a></li>
         </ul>
       </li>
-  <script language="JavaScript" src="http://api.ecshop.com/menu_ext.php?charset=utf-8&lang=zh_cn"></script>
 </ul>
 </div>
 <div id="help-div" style="display:none">
@@ -285,7 +284,7 @@ body {
 <div id="help-content"></div>
 </div>
 </div>
-<script type="text/javascript" src="../js/global.js"></script><script type="text/javascript" src="../js/utils.js"></script><script type="text/javascript" src="../js/transport.js"></script><script language="JavaScript">
+<script type="text/javascript" src="../js/utils.js"></script><script language="JavaScript">
 <!--
 var collapse_all = "闭合";
 var expand_all = "展开";
@@ -314,7 +313,7 @@ function toggleCollapse()
   }
 
   collapse = !collapse;
-  document.getElementById('toggleImg').src = collapse ? '<?php echo PUBLIC_PATH ?>images/menu_minus.gif' : '<?php echo PUBLIC_PATH ?>images/menu_plus.gif';
+  document.getElementById('toggleImg').src = collapse ? 'images/menu_minus.gif' : 'images/menu_plus.gif';
   document.getElementById('toggleImg').alt = collapse ? collapse_all : expand_all;
 }
 

@@ -4,7 +4,7 @@ class AdminController extends AdminPlatformController {
 		if ($this -> isLogin()) {
 			$this -> redirect('index.php?act=index');
 		} else {
-			$this->view->display('login');
+			$this->view->display('login.tpl');
 		}
 	}
 
@@ -47,25 +47,25 @@ class AdminController extends AdminPlatformController {
 	public function indexAction() {
 		
 		//var_dump($this->view);
-		$this->view->display('index');
+		$this->view->display('index.tpl');
 
 	}
 	
 	public function dragAction()
 	{
-		$this->view->display('drag');
+		$this->view->display('drag.tpl');
 	}
 
 	public function topAction() {
-		$this->view->display(str_replace('Action','',__FUNCTION__));
+		$this->view->display('top.tpl');
 	}
 
 	public function menuAction() {
-		$this->view->display(str_replace('Action','',__FUNCTION__));
+		$this->view->display('menu.tpl');
 	}
 
 	public function mainAction() {
-		$this->view->display(str_replace('Action','',__FUNCTION__));
+		$this->view->display('main.tpl');
 	}
 
 	public function testAction() {

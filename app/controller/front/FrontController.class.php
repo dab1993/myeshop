@@ -3,6 +3,7 @@
 	{
 	 	public function indexAction()
 		{
-			require CURRENT_VIEW_PATH.DS.'index.htm';
+			//require CURRENT_VIEW_PATH.DS.'index.htm';
+			$this->view->display('index.html');
 		}
 	}

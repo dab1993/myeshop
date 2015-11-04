@@ -4,7 +4,7 @@ class GoodsController extends AdminPlatformController {
 		$model_category = new CategoryModel;
 		$category_list = $model_category -> getTreeList(0);
 		$this->view->assign('category_list',$category_list);
-		$this->view->display('add');
+		$this->view->display('add.tpl');
 	}
 
 	public function insertAction() {
@@ -22,7 +22,7 @@ class GoodsController extends AdminPlatformController {
 		$ishot = Framework::getNullRequrest('is_hot', 0, 'post');
 
 		$data['goods_status'] = 0 | $isbest | $isnew | $ishot;
-		$data['is_on_sale'] = Framework::getNullRequrest('is_on_sale', 0);
+		$data['is_on_sale'] = Framework::getNullRequrest('is_on_sale', 0,'post');
 		
 		if($_FILES['goods_image']['error']!=4)
 		{
@@ -59,7 +59,7 @@ class GoodsController extends AdminPlatformController {
 		$this->view->assign('list',$list);
 		$page_html = PageTool::show($page, $pagesize, $goods_model -> autoTotalCount());
 		$this->view->assign('page_html',$page_html);
-		$this->view->display('list');
+		$this->view->display('list.tpl');
 	}
 
 }

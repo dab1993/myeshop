@@ -17,12 +17,12 @@
 <!-- start add new category form -->
 <div class="main-div">
   <form action="category.php?act=update" method="post" name="theForm" enctype="multipart/form-data">
-  	<input type="hidden" name="cat_id" value="<?php echo $this->data['category']['cat_id'] ?>" />
+  	<input type="hidden" name="cat_id" value="{$category.cat_id}" />
   <table width="100%" id="general-table">
       <tr>
         <td class="label">分类名称:</td>
         <td>
-          <input type='text' name='cat_name' maxlength="20" value="<?php echo $this->data['category']['cat_name'] ?>" size='27' /> <font color="red">*</font>
+          <input type='text' name='cat_name' maxlength="20" value=" {$category.cat_name}" size='27' /> <font color="red">*</font>
         </td>
       </tr>
       <tr>
@@ -30,26 +30,23 @@
         <td>
           <select name="parent_id">
             <option value="0">顶级分类</option>
-          <?php
-          	foreach($this->data['list'] as $row)
-          	{
-          		$deep=str_repeat('&nbsp;',$row['deep']*4);
-          		echo "<option ".($row['cat_id']==$this->data['category']['parent_id']?'selected':'')." value=\"{$row['cat_id']}\">{$deep}{$row['cat_name']}</option>";
-          	}
-          	?>
+          	{foreach $list as $row}
+          	
+          		<option {if $row.cat_id==$category.parent_id}selected{/if} value="{$row.cat_id}">{'&nbsp;'|str_repeat:($row.deep*2)}{$row.cat_name}</option>
+          	{/foreach}
           </select>
         </td>
       </tr>
       <tr>
         <td class="label">排序:</td>
         <td>
-          <input type="text" name='sort_order'  value="<?php echo $this->data['category']['sort_order'] ?>" size="15" />
+          <input type="text" name='sort_order'  value="{$category.sort_order}" size="15" />
         </td>
       </tr>
       <tr>
         <td class="label">分类描述:</td>
         <td>
-          <textarea name='cat_dsp' rows="6" cols="48"><?php echo $this->data['category']['cat_dsp'] ?></textarea>
+          <textarea name='cat_dsp' rows="6" cols="48">{$category.cat_dsp}</textarea>
         </td>
       </tr>
       </table>
@@ -60,6 +57,6 @@
   </form>
 </div>
 <script type="text/javascript" src="../js/utils.js"></script>
-<?php require TEMPLATE_VIEW_PATH.'footer.html'; ?>
+{include file=$smarty.const.TEMPLATE_VIEW_PATH|cat:'footer.html' }
 </body>
 </html>

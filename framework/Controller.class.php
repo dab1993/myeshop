@@ -4,10 +4,10 @@ class Controller {
 	public function __construct()
 	{
 		$this->view =new View;
-		$this->view->tpl_dir=CURRENT_VIEW_PATH.CONTROLLER.DS;
-		$this->view->tplc_dir=CURRENT_VIEW_PATH.CONTROLLER.DS;
-		$this->view->left_de='<{';
-		$this->view->right_de='{>';
+		$this->view->template_dir=CURRENT_VIEW_PATH.CONTROLLER.DS;
+		$this->view->compile_dir=COMPILE_PATH;
+		require TOOL_PATH.'modifiercompiler.php';
+		//echo $this->view->template_dir[0];
 	}
 	/**
 	 * 跳转到新页面
@@ -39,6 +39,10 @@ HTML;
 			}
 		}
 		die ;
+	}
+	public function __call($action,$args)
+	{
+		$this->redirect('index.php','页面未找到',10);
 	}
 
 }

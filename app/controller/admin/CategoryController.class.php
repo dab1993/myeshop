@@ -4,7 +4,7 @@ class CategoryController extends AdminPlatformController {
 		$category_model = new CategoryModel;
 		$list = $category_model -> getTreeList(0);
 		$this -> view -> assign('list', $list);
-		$this -> view -> display('list');
+		$this -> view -> display('list.tpl');
 	}
 
 	public function addAction() {
@@ -22,7 +22,7 @@ class CategoryController extends AdminPlatformController {
 		$this -> view -> assign('category', $category);
 		
 		$this -> view -> assign('list', $list);
-		$this -> view -> display('edit');
+		$this -> view -> display('edit.tpl');
 	}
 
 	public function updateAction() {

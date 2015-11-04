@@ -24,13 +24,9 @@
     <th>商品数量</th>
     <th>排序</th>
     <th>操作</th>
-  </tr>
-<?php
-	
-  	foreach($this->data['list'] as $row)
-  	{
-  		$html=<<<HTML
-    <tr align="center" class="{$row['parent_id']}" id="0_1">
+  </tr>	
+  	{foreach $list as $row}
+  	<tr align="center" class="{$row['parent_id']}" id="0_1">
     <td align="left" class="first-cell" >
             <img src="images/menu_minus.gif" id="icon_0_1" width="9" height="9" border="0" style="margin-left:{$row[
             "deep"]}em" onclick="rowClicked(this)" />
@@ -44,13 +40,11 @@
       <a href="category.php?act=delete&id={$row["cat_id"]}" onclick="return confirm('确定删除吗');" title="移除">移除</a>
     </td>
   </tr>
-HTML;
-	echo $html;
-  }
-  ?>
+
+	{/foreach}
   </table>
 </div>
 </form>
-<?php require TEMPLATE_VIEW_PATH.'footer.html'; ?>
+{include file=$smarty.const.TEMPLATE_VIEW_PATH|cat:'footer.html' }
 </body>
 </html>

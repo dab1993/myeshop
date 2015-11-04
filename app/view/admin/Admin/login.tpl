@@ -4,8 +4,8 @@
 <head>
 <title>ECSHOP 管理中心</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="<?php echo PUBLIC_PATH; ?>styles/general.css" rel="stylesheet" type="text/css" />
-<link href="<?php echo PUBLIC_PATH; ?>styles/main.css" rel="stylesheet" type="text/css" />
+<link href="styles/general.css" rel="stylesheet" type="text/css" />
+<link href="styles/main.css" rel="stylesheet" type="text/css" />
 
 <style type="text/css">
 body {
@@ -17,7 +17,7 @@ body {
 <form method="post" action="index.php?act=signin" name='theForm' onsubmit="return validate()">
   <table cellspacing="0" cellpadding="0" style="margin-top: 100px" align="center">
   <tr>
-    <td><img src="<?php echo PUBLIC_PATH ?>images/login.png" width="178" height="256" border="0" alt="ECSHOP" /></td>
+    <td><img src="images/login.png" width="178" height="256" border="0" alt="ECSHOP" /></td>
     <td style="padding-left: 50px">
       <table>
       <tr>

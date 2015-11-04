@@ -1,5 +1,3 @@
-
-<!-- $Id: goods_info.htm 17126 2010-04-23 10:30:26Z liuhui $ -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -55,13 +53,10 @@
           <tr>
             <td class="label">商品分类：</td>
             <td><select name="cat_id" onchange="hideCatDiv()" ><option value="0">请选择...</option>
-            	          <?php
-          	foreach($this->data['category_list'] as $row)
-          	{
-          		$deep=str_repeat('&nbsp;',$row['deep']*4);
-          		echo "<option value=\"{$row['cat_id']}\">{$deep}{$row['cat_name']}</option>";
-          	}
-          	?>
+            	{foreach $category_list as $row}
+          	
+          		<option value="{$row.cat_id}">{'&nbsp;'|str_repeat:($row.deep*2)}{$row.cat_name}</option>
+          	{/foreach}
             </select><span class="require-field">*</span>            </td>
           </tr>
           <tr>
@@ -80,8 +75,6 @@
             <td class="label">上传商品图片：</td>
             <td>
               <input type="file" name="goods_image"/>
-                              <!--<img src="images/no.gif" />
-                            <br /><input type="text" size="40" value="商品图片外部URL" style="color:#aaa;" onfocus="if (this.value == '商品图片外部URL'){this.value='http://';this.style.color='#000';}" name="goods_img_url"/>-->
             </td>
           </tr>
         </table>
@@ -111,25 +104,6 @@
           </tr>
         </table>
 
-        <!-- 商品相册 -->
-        <!--<table width="90%" id="gallery-table" style="display:none" align="center">
-          
-          <tr>
-            <td>
-                          </td>
-          </tr>
-          <tr><td>&nbsp;</td></tr>
-          
-          <tr>
-            <td>
-              <a href="javascript:;" onclick="addImg(this)">[+]</a>
-              图片描述 <input type="text" name="img_desc[]" size="20" />
-              上传文件 <input type="file" name="img_url[]" />
-              <input type="text" size="40" value="或者输入外部图片链接地址" style="color:#aaa;" onfocus="if (this.value == '或者输入外部图片链接地址'){this.value='http://';this.style.color='#000';}" name="img_file[]"/>
-            </td>
-          </tr>
-        </table>-->
-
         <div class="button-div">
           <input type="hidden" name="goods_id" value="0" />
           <input type="submit" value=" 确定 " class="button" />
@@ -140,7 +114,7 @@
     </div>
 </div>
 <script type="text/javascript" src="js/tab.js"></script>
-<?php require TEMPLATE_VIEW_PATH.'footer.html'; ?>
+{include file=$smarty.const.TEMPLATE_VIEW_PATH|cat:'footer.html' }
 </script>
 </body>
 </html>

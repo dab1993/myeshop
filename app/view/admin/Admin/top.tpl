@@ -3,10 +3,11 @@
 <head>
 <title></title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="<?php echo PUBLIC_PATH?>styles/general.css" rel="stylesheet" type="text/css" />
+<link href="styles/general.css" rel="stylesheet" type="text/css" />
 
 
 <style type="text/css">
+{literal}
 #header-div {
   background: #278296;
   border-bottom: 1px solid #FFF;
@@ -102,91 +103,13 @@
 #submenu-div a.fix-submenu:hover{padding:1px 5px; *padding:3px 5px 5px; background:#FFF; color:#278296;}
 #menu-div li.fix-spacel{width:30px; border-left:none;}
 #menu-div li.fix-spacer{border-right:none;}
+{/literal}
 </style>
-<script type="text/javascript" src="<?php echo PUBLIC_PATH; ?>js/transport.js"></script><script type="text/javascript">
-onload = function()
-{
-  Ajax.call('index.php?is_ajax=1&act=license','', start_sendmail_Response, 'GET', 'JSON');
-}
-/**
- * 帮助系统调用
- */
-function web_address()
-{
-  var ne_add = parent.document.getElementById('main-frame');
-  var ne_list = ne_add.contentWindow.document.getElementById('search_id').innerHTML;
-  ne_list.replace('-', '');
-  var arr = ne_list.split('-');
-  window.open('help.php?al='+arr[arr.length - 1],'_blank');
-}
-
-
-/**
- * 授权检测回调处理
- */
-function start_sendmail_Response(result)
-{
-  // 运行正常
-  if (result.error == 0)
-  {
-    var str = '';
-		if (result['content']['auth_str'])
-		{
-			str = '<a href="javascript:void(0);" target="_blank">' + result['content']['auth_str'];
-			if (result['content']['auth_type'])
-			{
-				str += '[' + result['content']['auth_type'] + ']';
-			}
-			str += '</a> ';
-		}
-
-    document.getElementById('license-div').innerHTML = str;
-  }
-}
-
-function modalDialog(url, name, width, height)
-{
-  if (width == undefined)
-  {
-    width = 400;
-  }
-  if (height == undefined)
-  {
-    height = 300;
-  }
-
-  if (window.showModalDialog)
-  {
-    window.showModalDialog(url, name, 'dialogWidth=' + (width) + 'px; dialogHeight=' + (height+5) + 'px; status=off');
-  }
-  else
-  {
-    x = (window.screen.width - width) / 2;
-    y = (window.screen.height - height) / 2;
-
-    window.open(url, name, 'height='+height+', width='+width+', left='+x+', top='+y+', toolbar=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, modal=yes');
-  }
-}
-
-function ShowToDoList()
-{
-  try
-  {
-    var mainFrame = window.top.frames['main-frame'];
-    mainFrame.window.showTodoList(adminId);
-  }
-  catch (ex)
-  {
-  }
-}
-
-
-var adminId = "1"; 
-</script>
+<script type="text/javascript" src="js/transport.js"></script>
 </head>
 <body>
 <div id="header-div">
-  <div id="logo-div" style="bgcolor:#000000;"><img src="<?php echo PUBLIC_PATH ?>images/ecshop_logo.gif" alt="ECSHOP - power for e-commerce" /></div>
+  <div id="logo-div" style="bgcolor:#000000;"><img src="images/ecshop_logo.gif" alt="ECSHOP - power for e-commerce" /></div>
   <div id="license-div" style="bgcolor:#000000;"></div>
   <div id="submenu-div">
     <ul>
@@ -203,7 +126,7 @@ var adminId = "1";
             <a href="index.php?act=clear_cache" target="main-frame" class="fix-submenu">清除缓存</a>
       <a href="/admin/index.php?act=logout" target="_top" class="fix-submenu">退出</a>
     </div>
-        <div id="load-div" style="padding: 5px 10px 0 0; text-align: right; color: #FF9900; display: none;width:40%;float:right;"><img src="<?php echo PUBLIC_PATH ?>images/top_loader.gif" width="16" height="16" alt="正在处理您的请求..." style="vertical-align: middle" /> 正在处理您的请求...</div>
+        <div id="load-div" style="padding: 5px 10px 0 0; text-align: right; color: #FF9900; display: none;width:40%;float:right;"><img src="images/top_loader.gif" width="16" height="16" alt="正在处理您的请求..." style="vertical-align: middle" /> 正在处理您的请求...</div>
   </div>
 </div>
 <div id="menu-div">

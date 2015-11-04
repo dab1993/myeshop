@@ -30,13 +30,10 @@
         <td>
           <select name="parent_id">
             <option value="0">顶级分类</option>
-          <?php
-          	foreach($this->data['list'] as $row)
-          	{
-          		$deep=str_repeat('&nbsp;',$row['deep']*4);
-          		echo "<option value=\"{$row['cat_id']}\">{$deep}{$row['cat_name']}</option>";
-          	}
-          	?>
+         {foreach $list as $row}
+          	
+          		<option value="{$row.cat_id}">{'&nbsp;'|str_repeat:($row.deep*2)}{$row.cat_name}</option>
+          	{/foreach}
           </select>
         </td>
       </tr>
@@ -63,6 +60,6 @@
   </form>
 </div>
 <script type="text/javascript" src="../js/utils.js"></script>
-<?php require TEMPLATE_VIEW_PATH.'footer.html'; ?>
+{include file=$smarty.const.TEMPLATE_VIEW_PATH|cat:'footer.html' }
 </body>
 </html>

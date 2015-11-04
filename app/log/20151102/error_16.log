@@ -1,0 +1,77 @@
+[02-Nov-2015 08:58:22 UTC] PHP Fatal error:  Class Obj contains 4 abstract methods and must therefore be declared abstract or implement the remaining methods (ArrayAccess::offsetExists, ArrayAccess::offsetGet, ArrayAccess::offsetSet, ...) in G:\myeshop\test.php on line 14
+[02-Nov-2015 08:58:22 UTC] PHP Stack trace:
+[02-Nov-2015 08:58:22 UTC] PHP   1. {main}() G:\myeshop\admin\index.php:0
+[02-Nov-2015 08:58:22 UTC] PHP   2. Framework::run() G:\myeshop\admin\index.php:3
+[02-Nov-2015 08:58:22 UTC] PHP   3. Framework::dispatch() G:\myeshop\framework\Framework.class.php:143
+[02-Nov-2015 08:58:22 UTC] PHP   4. AdminController->testAction() G:\myeshop\framework\Framework.class.php:96
+[02-Nov-2015 08:58:22 UTC] PHP   5. require() G:\myeshop\app\controller\admin\AdminController.class.php:70
+[02-Nov-2015 08:58:36 UTC] PHP Fatal error:  Class Obj contains 4 abstract methods and must therefore be declared abstract or implement the remaining methods (ArrayAccess::offsetExists, ArrayAccess::offsetGet, ArrayAccess::offsetSet, ...) in G:\myeshop\test.php on line 14
+[02-Nov-2015 08:58:36 UTC] PHP Stack trace:
+[02-Nov-2015 08:58:36 UTC] PHP   1. {main}() G:\myeshop\admin\index.php:0
+[02-Nov-2015 08:58:36 UTC] PHP   2. Framework::run() G:\myeshop\admin\index.php:3
+[02-Nov-2015 08:58:36 UTC] PHP   3. Framework::dispatch() G:\myeshop\framework\Framework.class.php:143
+[02-Nov-2015 08:58:36 UTC] PHP   4. AdminController->testAction() G:\myeshop\framework\Framework.class.php:96
+[02-Nov-2015 08:58:36 UTC] PHP   5. require() G:\myeshop\app\controller\admin\AdminController.class.php:70
+[02-Nov-2015 08:58:39 UTC] PHP Fatal error:  Class Obj contains 4 abstract methods and must therefore be declared abstract or implement the remaining methods (ArrayAccess::offsetExists, ArrayAccess::offsetGet, ArrayAccess::offsetSet, ...) in G:\myeshop\test.php on line 14
+[02-Nov-2015 08:58:39 UTC] PHP Stack trace:
+[02-Nov-2015 08:58:39 UTC] PHP   1. {main}() G:\myeshop\admin\index.php:0
+[02-Nov-2015 08:58:39 UTC] PHP   2. Framework::run() G:\myeshop\admin\index.php:3
+[02-Nov-2015 08:58:39 UTC] PHP   3. Framework::dispatch() G:\myeshop\framework\Framework.class.php:143
+[02-Nov-2015 08:58:39 UTC] PHP   4. AdminController->testAction() G:\myeshop\framework\Framework.class.php:96
+[02-Nov-2015 08:58:39 UTC] PHP   5. require() G:\myeshop\app\controller\admin\AdminController.class.php:70
+[02-Nov-2015 08:58:51 UTC] PHP Fatal error:  Class Obj contains 4 abstract methods and must therefore be declared abstract or implement the remaining methods (ArrayAccess::offsetExists, ArrayAccess::offsetGet, ArrayAccess::offsetSet, ...) in G:\myeshop\test.php on line 14
+[02-Nov-2015 08:58:51 UTC] PHP Stack trace:
+[02-Nov-2015 08:58:51 UTC] PHP   1. {main}() G:\myeshop\admin\index.php:0
+[02-Nov-2015 08:58:51 UTC] PHP   2. Framework::run() G:\myeshop\admin\index.php:3
+[02-Nov-2015 08:58:51 UTC] PHP   3. Framework::dispatch() G:\myeshop\framework\Framework.class.php:143
+[02-Nov-2015 08:58:51 UTC] PHP   4. AdminController->testAction() G:\myeshop\framework\Framework.class.php:96
+[02-Nov-2015 08:58:51 UTC] PHP   5. require() G:\myeshop\app\controller\admin\AdminController.class.php:70
+[02-Nov-2015 08:58:53 UTC] PHP Fatal error:  Class Obj contains 4 abstract methods and must therefore be declared abstract or implement the remaining methods (ArrayAccess::offsetExists, ArrayAccess::offsetGet, ArrayAccess::offsetSet, ...) in G:\myeshop\test.php on line 14
+[02-Nov-2015 08:58:53 UTC] PHP Stack trace:
+[02-Nov-2015 08:58:53 UTC] PHP   1. {main}() G:\myeshop\admin\index.php:0
+[02-Nov-2015 08:58:53 UTC] PHP   2. Framework::run() G:\myeshop\admin\index.php:3
+[02-Nov-2015 08:58:53 UTC] PHP   3. Framework::dispatch() G:\myeshop\framework\Framework.class.php:143
+[02-Nov-2015 08:58:53 UTC] PHP   4. AdminController->testAction() G:\myeshop\framework\Framework.class.php:96
+[02-Nov-2015 08:58:53 UTC] PHP   5. require() G:\myeshop\app\controller\admin\AdminController.class.php:70
+[02-Nov-2015 08:58:58 UTC] PHP Fatal error:  Class Obj contains 4 abstract methods and must therefore be declared abstract or implement the remaining methods (ArrayAccess::offsetExists, ArrayAccess::offsetGet, ArrayAccess::offsetSet, ...) in G:\myeshop\test.php on line 14
+[02-Nov-2015 08:58:58 UTC] PHP Stack trace:
+[02-Nov-2015 08:58:58 UTC] PHP   1. {main}() G:\myeshop\admin\index.php:0
+[02-Nov-2015 08:58:58 UTC] PHP   2. Framework::run() G:\myeshop\admin\index.php:3
+[02-Nov-2015 08:58:58 UTC] PHP   3. Framework::dispatch() G:\myeshop\framework\Framework.class.php:143
+[02-Nov-2015 08:58:58 UTC] PHP   4. AdminController->testAction() G:\myeshop\framework\Framework.class.php:96
+[02-Nov-2015 08:58:58 UTC] PHP   5. require() G:\myeshop\app\controller\admin\AdminController.class.php:70
+[02-Nov-2015 08:58:58 UTC] PHP Fatal error:  Class Obj contains 4 abstract methods and must therefore be declared abstract or implement the remaining methods (ArrayAccess::offsetExists, ArrayAccess::offsetGet, ArrayAccess::offsetSet, ...) in G:\myeshop\test.php on line 14
+[02-Nov-2015 08:58:58 UTC] PHP Stack trace:
+[02-Nov-2015 08:58:58 UTC] PHP   1. {main}() G:\myeshop\admin\index.php:0
+[02-Nov-2015 08:58:58 UTC] PHP   2. Framework::run() G:\myeshop\admin\index.php:3
+[02-Nov-2015 08:58:58 UTC] PHP   3. Framework::dispatch() G:\myeshop\framework\Framework.class.php:143
+[02-Nov-2015 08:58:58 UTC] PHP   4. AdminController->testAction() G:\myeshop\framework\Framework.class.php:96
+[02-Nov-2015 08:58:58 UTC] PHP   5. require() G:\myeshop\app\controller\admin\AdminController.class.php:70
+[02-Nov-2015 08:58:59 UTC] PHP Fatal error:  Class Obj contains 4 abstract methods and must therefore be declared abstract or implement the remaining methods (ArrayAccess::offsetExists, ArrayAccess::offsetGet, ArrayAccess::offsetSet, ...) in G:\myeshop\test.php on line 14
+[02-Nov-2015 08:58:59 UTC] PHP Stack trace:
+[02-Nov-2015 08:58:59 UTC] PHP   1. {main}() G:\myeshop\admin\index.php:0
+[02-Nov-2015 08:58:59 UTC] PHP   2. Framework::run() G:\myeshop\admin\index.php:3
+[02-Nov-2015 08:58:59 UTC] PHP   3. Framework::dispatch() G:\myeshop\framework\Framework.class.php:143
+[02-Nov-2015 08:58:59 UTC] PHP   4. AdminController->testAction() G:\myeshop\framework\Framework.class.php:96
+[02-Nov-2015 08:58:59 UTC] PHP   5. require() G:\myeshop\app\controller\admin\AdminController.class.php:70
+[02-Nov-2015 08:58:59 UTC] PHP Fatal error:  Class Obj contains 4 abstract methods and must therefore be declared abstract or implement the remaining methods (ArrayAccess::offsetExists, ArrayAccess::offsetGet, ArrayAccess::offsetSet, ...) in G:\myeshop\test.php on line 14
+[02-Nov-2015 08:58:59 UTC] PHP Stack trace:
+[02-Nov-2015 08:58:59 UTC] PHP   1. {main}() G:\myeshop\admin\index.php:0
+[02-Nov-2015 08:58:59 UTC] PHP   2. Framework::run() G:\myeshop\admin\index.php:3
+[02-Nov-2015 08:58:59 UTC] PHP   3. Framework::dispatch() G:\myeshop\framework\Framework.class.php:143
+[02-Nov-2015 08:58:59 UTC] PHP   4. AdminController->testAction() G:\myeshop\framework\Framework.class.php:96
+[02-Nov-2015 08:58:59 UTC] PHP   5. require() G:\myeshop\app\controller\admin\AdminController.class.php:70
+[02-Nov-2015 08:59:05 UTC] PHP Fatal error:  Class Obj contains 4 abstract methods and must therefore be declared abstract or implement the remaining methods (ArrayAccess::offsetExists, ArrayAccess::offsetGet, ArrayAccess::offsetSet, ...) in G:\myeshop\test.php on line 14
+[02-Nov-2015 08:59:05 UTC] PHP Stack trace:
+[02-Nov-2015 08:59:05 UTC] PHP   1. {main}() G:\myeshop\admin\index.php:0
+[02-Nov-2015 08:59:05 UTC] PHP   2. Framework::run() G:\myeshop\admin\index.php:3
+[02-Nov-2015 08:59:05 UTC] PHP   3. Framework::dispatch() G:\myeshop\framework\Framework.class.php:143
+[02-Nov-2015 08:59:05 UTC] PHP   4. AdminController->testAction() G:\myeshop\framework\Framework.class.php:96
+[02-Nov-2015 08:59:05 UTC] PHP   5. require() G:\myeshop\app\controller\admin\AdminController.class.php:70
+[02-Nov-2015 08:59:08 UTC] PHP Fatal error:  Class Obj contains 4 abstract methods and must therefore be declared abstract or implement the remaining methods (ArrayAccess::offsetExists, ArrayAccess::offsetGet, ArrayAccess::offsetSet, ...) in G:\myeshop\test.php on line 14
+[02-Nov-2015 08:59:08 UTC] PHP Stack trace:
+[02-Nov-2015 08:59:08 UTC] PHP   1. {main}() G:\myeshop\admin\index.php:0
+[02-Nov-2015 08:59:08 UTC] PHP   2. Framework::run() G:\myeshop\admin\index.php:3
+[02-Nov-2015 08:59:08 UTC] PHP   3. Framework::dispatch() G:\myeshop\framework\Framework.class.php:143
+[02-Nov-2015 08:59:08 UTC] PHP   4. AdminController->testAction() G:\myeshop\framework\Framework.class.php:96
+[02-Nov-2015 08:59:08 UTC] PHP   5. require() G:\myeshop\app\controller\admin\AdminController.class.php:70

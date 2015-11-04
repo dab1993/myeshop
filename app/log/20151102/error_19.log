@@ -1,0 +1,7 @@
+[02-Nov-2015 11:05:18 UTC] PHP Parse error:  syntax error, unexpected T_VARIABLE in G:\myeshop\app\model\AdminModel.class.php on line 23
+[02-Nov-2015 11:05:18 UTC] PHP Stack trace:
+[02-Nov-2015 11:05:18 UTC] PHP   1. {main}() G:\myeshop\admin\index.php:0
+[02-Nov-2015 11:05:18 UTC] PHP   2. Framework::run() G:\myeshop\admin\index.php:3
+[02-Nov-2015 11:05:18 UTC] PHP   3. Framework::dispatch() G:\myeshop\framework\Framework.class.php:143
+[02-Nov-2015 11:05:18 UTC] PHP   4. AdminController->signinAction() G:\myeshop\framework\Framework.class.php:96
+[02-Nov-2015 11:05:18 UTC] PHP   5. Framework::autoLoad() G:\myeshop\framework\Framework.class.php:0

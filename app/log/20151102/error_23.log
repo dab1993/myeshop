@@ -1,0 +1,9 @@
+[02-Nov-2015 15:59:34 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'froms it_category' at line 1' in G:\myeshop\test.php:32
+Stack trace:
+#0 G:\myeshop\test.php(32): PDO->query('select * froms ...')
+#1 G:\myeshop\app\controller\admin\AdminController.class.php(70): require('G:\myeshop\test...')
+#2 G:\myeshop\framework\Framework.class.php(96): AdminController->testAction()
+#3 G:\myeshop\framework\Framework.class.php(143): Framework::dispatch()
+#4 G:\myeshop\admin\index.php(3): Framework::run(Array)
+#5 {main}
+  thrown in G:\myeshop\test.php on line 32

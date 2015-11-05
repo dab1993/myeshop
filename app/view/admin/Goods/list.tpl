@@ -42,7 +42,7 @@
 						<td>
 							<input type="checkbox" name="checkboxes[]" value="{$row.goods_id}" />{$row.goods_id}</td>
 						<td align="center">
-							<a target="_blank" href={$smarty.const.UPLOAD_URL|cat:$row.image_ori}><img width="100" height="100" src='{$smarty.const.UPLOAD_URL|cat:$row.image_thumb}' border="0"/></a>
+							<a target="_blank" href={$smarty.const.UPLOAD_URL|cat:$row.image_ori}>{$row.image_thumb|url : '/20151101/goods_5635c2c7b86b5.png'}</a>
 							<!--<a href="../goods.php?id=9" target="_blank" title="查看"><img src="images/icon_view.gif" width="16" height="16" border="0" /></a>
       <a href="goods.php?act=edit&goods_id=9&extension_code=" title="编辑"><img src="images/icon_edit.gif" width="16" height="16" border="0" /></a>
       

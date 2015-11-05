@@ -4,10 +4,7 @@ class Controller {
 	public function __construct()
 	{
 		$this->view =new View;
-		$this->view->template_dir=CURRENT_VIEW_PATH.CONTROLLER.DS;
-		$this->view->compile_dir=COMPILE_PATH;
-		require TOOL_PATH.'modifiercompiler.php';
-		//echo $this->view->template_dir[0];
+		
 	}
 	/**
 	 * 跳转到新页面

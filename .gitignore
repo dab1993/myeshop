@@ -1,7 +1,10 @@
 ﻿#编译文件不上传#
-view_c
-cache
-upload
+view_c/
+cache/
+upload/
+uploads/
 /nbproject/private/
 .project
 git-bash.exe.link
+
+nbproject/
